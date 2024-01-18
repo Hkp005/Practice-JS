@@ -492,26 +492,75 @@
 // calci(a,b,add);
 
 
-let  a= prompt("Give me a number");
+// let  a= prompt("Give me a number");
 
-let b = prompt("Give me a number");
+// let b = prompt("Give me a number");
 
-a = parseInt(a);
-b = parseInt(b);
-function add(a,b){
-        console.log(a+b);
-}
+// a = parseInt(a);
+// b = parseInt(b);
+// function add(a,b){
+//         console.log(a+b);
+// }
 
-function calci(add){
-        add(a,b);
-}
+// function calci(add){
+//         add(a,b);
+// }
 
-calci(add);
-
-
+// calci(add);
 
 
+// function getData(dataId, getNextData ){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() =>{
+//               console.log("data is", dataId);
+//               reject("Error hai bhai sahi code likh");
+//               if(getNextData){
+//               getNextData();} 
+//         },5000)
+        
+//     });
+        
+// }
+// getData(1 , () => {
+//         getData(2,() => {
+//                 getData(3);
+//         });
+// })
 
+// let promise = new Promise((resolve, reject) => {
+//         console.log("Kuch to hai ");
+// })
+
+const getPromise = () => {
+  return new Promise((resolve, reject) => {
+    console.log("Bande mai dam hai");
+//     resolve("Success");
+reject("Bhai Sahi se coding kar");
+    })
+};
+
+let promise = getPromise();
+promise.then((res) => {
+        console.log("Ke Hua");
+})
+
+promise.catch((err) => {
+        console.log("Kuch aur try karte hai");
+})
+
+
+// function getData(dataId, getNextData ){
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() =>{
+//                   console.log("data is", dataId);
+//                   reject("Error hai bhai sahi code likh");
+//                   if(getNextData){
+//                   getNextData();} 
+//             },5000)
+            
+//         });
+            
+//     }
 
 
 
