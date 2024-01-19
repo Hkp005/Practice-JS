@@ -527,40 +527,120 @@
 //         });
 // })
 
+
+// will do it using promises
+
+
+// function getData(dataId){
+//         return new Promise((resolve, reject) => {
+//          setTimeout(() => {
+//          console.log("Ye le teri id", dataId);
+//         resolve("success");
+//         }, 2000);
+                
+//         })
+// }
+// getData(1).then((res) =>{
+//         console.log(res);
+//         getData(2).then(() =>{
+//                 console.log(res);
+//         })
+// })
+//  we can also do one more thing
+// getData(1)
+// .then((res) => {
+//    return getData(2);
+// })
+// .then((res)=>{
+//         console.log(res);
+// })
+
+
+
+
+
+
+// function delayedGreeting(name, time) {
+//         setTimeout((person,hour) => {
+//             console.log(`Hello, It's been  hour.`);
+//         }, 1000);
+//     }
+//     function delayedGreeting(name, time) {
+//         setTimeout(() => {
+//             console.log(`Hello, ${name}! It's been ${time} hours.`);
+//         }, time*1000);
+//     }
+
+
+// function processNumbers(operation, a, b) {
+//         const result = operation(a, b);
+//         console.log(`Result: ${result}`);
+//     }
+    
+//     const add = (x, y) => x + y;
+//     const subtract = (x, y) => x - y;
+//     const multiply = (x, y) => x * y;
+    
+    // Using processNumbers with arrow functions as arguments
+//     processNumbers(add, 5, 3);       // Result: 8
+//     processNumbers(subtract, 8, 2);  // Result: 6
+//     processNumbers(multiply, 4, 7);  // Result: 28
+
+
+
+
+
+
+
 // let promise = new Promise((resolve, reject) => {
 //         console.log("Kuch to hai ");
 // })
 
-const getPromise = () => {
-  return new Promise((resolve, reject) => {
-    console.log("Bande mai dam hai");
-//     resolve("Success");
-reject("Bhai Sahi se coding kar");
-    })
-};
+// const getPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log("Bande mai dam hai");
+// //     resolve("Success");
+// reject("Bhai Sahi se coding kar");
+//     })
+// };
 
-let promise = getPromise();
-promise.then((res) => {
-        console.log("Ke Hua");
-})
+// let promise = getPromise();
+// promise.then((res) => {
+//         console.log("Ke Hua");
+// })
 
-promise.catch((err) => {
-        console.log("Kuch aur try karte hai");
-})
+// promise.catch((err) => {
+//         console.log("Kuch aur try karte hai");
+// })
 
 
-// function getData(dataId, getNextData ){
+
+
+
+
+// function asyncfunc1(){
 //         return new Promise((resolve, reject) => {
-//             setTimeout(() =>{
-//                   console.log("data is", dataId);
-//                   reject("Error hai bhai sahi code likh");
-//                   if(getNextData){
-//                   getNextData();} 
-//             },5000)
-            
-//         });
-            
-//     }
+//                 setTimeout(() => {
+//                    console.log("data1");
+//                    resolve("success");
+//                 },3000)
+//         })
+         
+// }
+// function asyncfunc2(){
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                    console.log("data2");
+//                    resolve("success");
+//                 },3000)
+//         })
+         
+// }
+// console.log("fetching data 1");
+// asyncfunc1().then(() => {
+//         console.log("fetching data 2");
+//         asyncfunc2().then(() => {})
+// })
 
 
 
@@ -569,41 +649,306 @@ promise.catch((err) => {
 
 
 
+// function simfunc(){
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("Done Checking Data 1"); 
+//                         resolve("Data 1 is checked");
+//                 },4000)
+//         })
+// }
+// function simfunc2(){
+//         return new Promise((resolve, reject) => {
+//                 setTimeout(() => {
+//                         console.log("Done checking Data 2"); 
+//                         resolve("Data 2 is also checked");
+//                 },4000)
+//         })
+// }
+
+// console.log("take data 1 and check it")
+// simfunc().then(() => {
+//         console.log("take data2 and check it");
+//         simfunc2().then(() =>{})
+// })
 
 
 
 
+// function numberChecking(num){
+//         switch (Math.sign(num)) {
+//                 case 1:
+//                        console.log("Number is Positive"); 
+//                         break;
+//                 case -1:
+//                         console.log("Number is Negative"); 
+//                          break;
+//                 default:
+//                         console.log("Number is Zero");
+//                         break;
+//         }
+// }
+// let number = prompt("Enter A number");
+// if (number > 0) {
+//         console.log("It is a positvie number");
+// }else if(number < 0){
+//         console.log("It is negative number");
+// }else{
+//         console.log("It is zero");
+// };
+
+
+
+// function checkNumberSign(){
+//         const input = prompt("Enter a Number");
+//         const number = Number(input);
+        
+//         if(isNaN(input)){
+//                 console.log("It is not a number");
+//         }else {
+//                 const result = 
+//                 number === 0 ? "the number is zero" :
+//                 number >= 0 ? `${number} is positive`: `${number} is negative `; 
+//         console.log(result);
+//         }
+// }
+// checkNumberSign();
+
+
+// let a = 10;
+// let b = 20;
+// let tem;
+
+// console.log(`before swap a = ${a}`);
+// console.log(`before swap b = ${b}`);
+
+// tem = a;
+// a = b;
+// b = tem;
+// console.log(`after swap a = ${a}`);
+// console.log(`after swap b = ${b}`);
 
 
 
 
+// let a = 10;
+// let b = 20;
+// let tem ;
+
+// console.log(`before swap a = ${a}`);
+// console.log(`before swap b = ${b}`);
+
+// a = a+b;
+// b = a-b;
+// a = a-b;
+
+// console.log(`after swap a = ${a}`);
+// console.log(`after swap b = ${b}`);
 
 
 
 
+// let a = 10;
+// let b = 20;
+
+
+// console.log(`before swap a = ${a}`);
+// console.log(`before swap b = ${b}`);
+
+// [a,b]=[b,a];
+
+// console.log(`after swap a = ${a}`);
+// console.log(`after swap b = ${b}`);
+
+
+// function findSum(n){
+//         let sum = 0;
+//         for(let i = 1; i <= n ; i++)
+//         sum = sum + i;
+//         return sum;
+// }
+
+// let n = prompt("Give a number");
+// n = parseInt(n);
+// let result = findSum(n);
+// console.log(result);
+
+// function findSum(){
+//         if (n !== 0)
+//         return n + findSum(n-1);
+//         else 
+//         return n
+// }
+// const n = 5;
+// console.log(findSum(n));
 
 
 
 
+// function findSum(n) {
+//     if (n !== 0)
+//         return n + findSum(n - 1);
+//     else
+//         return n;
+// }
+// const n = 5;
+// console.log(findSum(n));
+
+// function kuchbhi(n){
+//         return n*(n+1)/2;
+// }
+// const n = 5;
+// console.log(kuchbhi(n));
+
+
+// function getIt(n){
+//         if (n!== 0){
+//                 return n + getIt(n-1);
+//         }else 
+//         return n; 
+// }
+// const n = 6;
+// console.log(getIt(n));
 
 
 
+// function sumTo(n){
+//         let sum = 0;
+//         for(let i=1; i <= n ; i++)
+//          sum = sum + i;
+//         return sum;
+// }
+// let n = 100;
+// console.log(sumTo(n));
+
+// let str = "Mai hu na";
+  
+// console.log(typeof (str + 3));
+
+
+// const obja = {
+//         Name : "hritik",
+//         Age : 22,
+//         Sex : "Male"
+// };
+// obja["freind"] = "Dina";
+
+
+// const dict = {
+//         Apologise : "mafi  mangna ",
+//         cuss : "gali",
+//         Mai : "mafi tu",
+//         Tu : "mai",
+// };
+//         Apologise : "mafi  mangna ",
+//         cuss : "gali",
+//         Mai : "mafi tu",
+//         Tu : "mai",
+// };
+//         Apologise : "mafi  mangna ",
+//         cuss : "gali",
+//         Mai : "mafi tu",
+//         Tu : "mai",
+// };
+
+// let a  = 10;
+// let b = 4;
+// console.log("++a" , ++a);
+// console.log("a++" , a++);
+// console.log("--a" , --a);
+// console.log("a--" , a--);
+// console.log("a" , a);
+// console.log("a--" , a--);
+// let age = prompt("What is your age?")
+//  switch (age) {
+//         case '14':
+//                 console.log("Your age is 14");
+//                 break;
+//         case '12':
+//                 console.log("Your age is 12");
+//                 break; 
+//         case '16':
+//                         console.log("Your age is 16");
+//                         break;               
+//         default:
+//                 console.log("Tu amar hai bhai");
+//                 break;
+//  }
+
+// let num = prompt("Number de de bhai");
+// num = parseInt(num);
+
+// if(num % 2 == 0 || num % 3 == 0){
+//         console.log("Bhai 2 ya 3 se divisibe hai");
+// }else {
+//         console.log("Kisi s ebhi divisible nahi hai mere bhai");
+// };
+
+
+// let mul = 1;
+// let n = prompt("Number do ftafat");
+// n = Number.parseInt(n);
+
+// for (let i = 1; i <  n; i++) {
+//         mul  = mul * i     
+// }
+// console.log(n*mul);
 
 
 
+// Ye For in loop hua
+// let studentMarks = {
+//         Rhaul : "86",
+//         Shivam : "95",
+//         Dina : "96",
+//         Bhuvam : "100"
+// }
+// for(let a in studentMarks){
+//      console.log("Marks of  " + a + " is " + studentMarks[a])
+// };
 
+// Ab simple for loop se karenge
 
+// let marks = {
+//         Rhaul : "86",
+//         Shivam : "95",
+//         Dina : "96",
+//         Bhuvam : "100"
+//  }
+//  for(let i = 0; i <Object.keys(marks).length ; i++){
+//         console.log("Marks of "+ Object.keys(marks)[i] + " is " + marks[Object.keys(marks)[i]])
+//  };
 
+// let num = prompt("Number likh")
+// num = Number.parseInt(num)
+//  switch (num) {
+//         case 9:
+//               alert("galat hai pfir se try kar");  
+//                 break;
+//         case 12:
+//                 console.log("Bhai tu to topper hai"); 
+//                           break;        
+//         case 13:
+//                 alert("galat hai pfir se try kar");  
+//                                   break;
+//         default:
+//                 alert("Tu rehne de tere bas ki nahi hai");
+//                 break;
+// }
 
+// let cn = 5;
+// let i
+// while(i != cn){
+//         i = prompt("number de");
+// }
+// console.log("Sahi jawab");
 
+//  function mean(a,b,c,d,e) {
+//         console.log((a+b+c+d+e)/mean.length);
+//  }
+//  mean(1,2,3,4,5);
 
-
-
-
-
-
-
-
-
-
-
+let mean = (a,b,c,d,e)=>{
+        return ((a+b+c+d+e)/mean.length);
+}
+console.log(mean(1,2,3,4,5));
