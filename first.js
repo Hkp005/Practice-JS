@@ -948,7 +948,181 @@
 //  }
 //  mean(1,2,3,4,5);
 
-let mean = (a,b,c,d,e)=>{
-        return ((a+b+c+d+e)/mean.length);
+// let mean = (a,b,c,d,e)=>{
+//         return ((a+b+c+d+e)/mean.length);
+// }
+// console.log(mean(1,2,3,4,5));
+
+// let name = " hritik ";
+// console.log(name.length);
+
+// let boy = "Ladka";
+// let girl = "ladki";
+// let sentence = `${boy} is elder than ${girl}`;
+// console.log(sentence);
+
+
+
+
+
+// // these are the some of string methods
+// let nam = "Bhukkad"
+
+// let dost = "Rahul"
+// let dosti = "   Rahuliya  "
+// console.log(nam.length)
+// console.log(nam.toUpperCase());
+// console.log(nam.toLowerCase());
+// console.log(nam.slice(2,5));
+// console.log(nam.slice(2));
+// console.log(nam.replace("kad","Bhu"));
+// console.log(nam.concat(" ",dost, " mera dost hai"));
+// console.log(dosti.trim());
+
+
+// let str = "Going for Practice and only practice";
+// for (let i= 0; i < str.length; i++) {
+//         console.log(str[i])
+        
+// }
+// let str = "Please give Rs 1000";
+
+// console.log(str.slice(14));
+// console.log(str.slice("Please give Rs".length));
+
+// let arra = [51,815,6,97,74,23,94];
+// console.log(arra);
+// arra[2] = 71;
+// console.log(arra);
+// let b = arra.toString();
+// console.log(b,typeof b);
+// console.log(arra.pop());
+// console.log(arra);
+// console.log(arra.push(88));
+// console.log(arra);
+// let r = arra.shift();
+// console.log(arra, r);
+
+// for (let i = 0; i < arra.length; i++) {
+//         console.log(arra[i]);
+// }
+// let arra = [51,815,6,97,74,23,94];
+// let arra1 = [151,1815,16,197,174,123,194];
+// let arra2 = [1151,11815,116,1197,1714,1123,1914];
+//  let new_arra = arra.concat(arra1,arra2);
+//  console.log(new_arra);
+
+
+
+
+// ye wala Ascending ke liye hai 
+// let compare = (a,b)=>{
+//         return a-b
+// }
+// let arra = [51,815,6,97,74,23,94];
+// arra.sort(compare)
+// console.log(arra);
+
+
+// ye wala Descending ke liye hai 
+// let compare = (a,b)=>{
+//         return b-a
+// }
+// let arra = [51,815,6,97,74,23,94];
+// arra.sort(compare)
+// console.log(arra);
+
+
+// let marks = [85,97,44,37,76,60];
+// let sum = 0
+//  for(let el of marks){
+//         sum = sum + el
+// }
+// let avgMarks = sum/marks.length
+// console.log(avgMarks);
+
+// let itemsPrice = [250,645,300,900,50];
+
+// for(let price of itemsPrice){
+//         let offer = price/10;
+//         price = offer - price
+//         return offer-price
+// }
+// console.log(itemsPrice)
+
+// let arr = [1,2,3,4,5];
+// let user;
+// do{
+//         user = prompt("number de de");
+//         user = Number.parseInt(user)
+//         arr.push(user)
+        
+// }while(user!=0);
+// console.log(arr);
+
+// let arra = [1111,9929,3698,420,5800];
+// arra.filter(()=>{
+//         if(arra%10 === 0){
+//         console.log(arra);
+//         }
+// })
+
+
+
+
+
+//just some practice 
+
+// let a = 16;
+// let b = 15;
+// console.log(a+b);
+
+
+// function add(a,b) {
+//         return a+b        
+// };
+
+// add
+
+// let addition = (a,b)=>{
+//         return a+b;
+// };
+// addition;
+
+// let a = 2
+// let b = 5
+// a += b;
+// console.log(a);
+
+// function multiply(a,b) {
+//         return a*b;
+// };
+
+// let a = 85
+// let b = 66
+// console.log("Tere bahi ka kehna hai ki answer itna hi aayega", multiply(a,b));
+
+// let mul = (a,b)=>{
+//         return a*b
+// }
+
+// let a = 89
+// let b = 63
+// console.log("answre is : "+ mul(a,b));
+
+// let a = 45
+// let b = 55
+
+// console.log(a *= b);
+
+
+function mul(a,b) {
+        let result = 0
+        for (let i = 0; i < b; i++) {
+              result +=a;  
+                
+        }
+        return result
 }
-console.log(mean(1,2,3,4,5));
+let result = mul(4,6);
+console.log(result)
